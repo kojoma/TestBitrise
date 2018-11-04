@@ -18,22 +18,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DefaultImage" translatesAutoresizingMaskIntoConstraints="NO" id="i9v-55-e3P">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DefaultImage" translatesAutoresizingMaskIntoConstraints="NO" id="i9v-55-e3P">
                                 <rect key="frame" x="50" y="70" width="275" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="BBh-Cj-KXQ"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CameraImage" translatesAutoresizingMaskIntoConstraints="NO" id="MWT-dg-uTK">
+                                <rect key="frame" x="50" y="320" width="275" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="xCC-1Y-iTW"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="i9v-55-e3P" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="0uv-4h-i46"/>
+                            <constraint firstItem="MWT-dg-uTK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="WY8-Tx-76H"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MWT-dg-uTK" secondAttribute="trailing" constant="50" id="Y2O-AY-9sH"/>
                             <constraint firstItem="i9v-55-e3P" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="c7J-1v-jyJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="i9v-55-e3P" secondAttribute="trailing" constant="50" id="khT-m2-6nu"/>
+                            <constraint firstItem="MWT-dg-uTK" firstAttribute="top" secondItem="i9v-55-e3P" secondAttribute="bottom" constant="50" id="r6f-oz-FpG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="cameraView" destination="MWT-dg-uTK" id="Xec-jv-KcS"/>
                         <outlet property="imageView" destination="i9v-55-e3P" id="VHN-vJ-zv3"/>
                     </connections>
                 </viewController>
@@ -42,6 +52,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="CameraImage" width="256" height="256"/>
         <image name="DefaultImage" width="256" height="256"/>
     </resources>
 </document>
